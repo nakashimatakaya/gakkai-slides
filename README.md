@@ -39,7 +39,9 @@ python3 ~/.agents/skills/gakkai-slides/scripts/build_deck.py outline.md -o deck.
 python3 ~/.agents/skills/gakkai-slides/scripts/check_deck.py deck.pptx
 ```
 
-check_deck.py は自分で作った既存のスライドにも使えます。box、ページ番号の欠落、フォント、パレット外の色、16pt未満の文字、1文1ボックスの分割を報告します。
+check_deck.py は自分で作った既存のスライドにも使えます。box、ページ番号の欠落、フォント、パレット外の色、16pt未満の文字、1文1ボックスの分割に加えて、プレースホルダーの残存（Text 1、YYYY、（要記入）など）、タイトルの語尾と長さ、同じ文型の並び、版面からのはみ出し、表記ゆれ（全角半角、句読点、長音）を報告します。`--story` を付けるとタイトルと主張の一覧が出るので、上から通し読みしてストーリーを確認してください。
+
+スライド規約は `references/slide-rules.md` が正本です。レビューで受けた指摘は末尾に1行ずつ追記して育ててください。
 
 ## アウトラインの書式
 
@@ -73,7 +75,7 @@ COI: なし
 
 ## 出典
 
-ガレメン（Garage members）「研究発表スライドの作り方」、ドキュメントプラス「分かりやすい学会発表のスライドの作り方」、にゅ〜ろろぐ、Antaa Slide（学会のフォント指定調査）、日本麻酔科学会・日本医学会のCOI開示規定、Anthropic skills の pptx スキル。詳細は references/ を参照。
+ガレメン（Garage members）「研究発表スライドの作り方」、ドキュメントプラス「分かりやすい学会発表のスライドの作り方」、にゅ〜ろろぐ、Antaa Slide（学会のフォント指定調査）、日本麻酔科学会・日本医学会のCOI開示規定、Anthropic skills の pptx スキル、gozen3ji/consulting-pptx-skill（MIT。約80項目のスライド規約と機械チェックの設計を学会向けに選抜して取り込んだ。36型SlideSpecとNodeパイプラインは取り込んでいない）。詳細は references/ を参照。
 
 ## ライセンス
 
